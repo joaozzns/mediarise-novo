@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import SEO from "@/components/SEO";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
+import Services from "@/components/sections/Services";
+import Portfolio from "@/components/sections/Portfolio";
+import Testimonials from "@/components/sections/Testimonials";
+import CTA from "@/components/sections/CTA";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div id="inicio" className="min-h-screen bg-background text-foreground font-brand">
+      <SEO
+        title="Mediarise | Agência de Marketing Premium"
+        description="Agência de Marketing para clínicas, saúde e negócios premium. Social Media, Tráfego Pago, Branding e Sites que elevam sua marca."
+      />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Portfolio />
+        <Testimonials />
+        <CTA />
+      </main>
+      <footer className="border-t border-border/60 py-8 text-center text-xs text-muted-foreground">
+        © {new Date().getFullYear()} Mediarise. Todos os direitos reservados.
+      </footer>
     </div>
   );
 };
