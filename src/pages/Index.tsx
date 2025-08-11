@@ -10,8 +10,8 @@ const Index = () => {
   return (
     <div id="inicio" className="min-h-screen bg-background text-foreground font-brand">
       <SEO
-        title="Mediarise | Agência de Marketing Premium"
-        description="Agência de Marketing para clínicas, saúde e negócios premium. Social Media, Tráfego Pago, Branding e Sites que elevam sua marca."
+        title="Agência MediaRise"
+        description="Agência de marketing especializada em clínicas estéticas, saúde e negócios premium, unindo dados, criatividade e agilidade para gerar crescimento consistente e resultados mensuráveis."
       />
       <main>
         <Hero />
