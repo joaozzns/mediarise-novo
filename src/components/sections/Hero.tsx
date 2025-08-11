@@ -6,8 +6,15 @@ const Hero = () => {
     <header className="relative overflow-hidden">
       <nav className="container py-6 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2" aria-label="Mediarise - Início">
-          <div className="h-3 w-3 rounded-full bg-primary" aria-hidden="true" />
-          <span className="font-bold tracking-tight text-lg">Mediarise</span>
+          <img
+            src="/lovable-uploads/87e88eee-c826-4d85-8459-a293e617e55a.png"
+            alt="Logo Mediarise Design & Marketing"
+            className="h-8 w-auto object-contain"
+            width={152}
+            height={36}
+            loading="eager"
+            decoding="async"
+          />
         </a>
         <div className="hidden md:flex items-center gap-6 text-sm">
           <a href="#servicos" className="story-link">Serviços</a>
