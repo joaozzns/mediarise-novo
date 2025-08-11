@@ -10,13 +10,13 @@ const CTA = () => {
         <p className="mt-3 text-muted-foreground">
           Fale agora com nossa equipe e receba um diagnóstico gratuito para identificar as melhores oportunidades para sua marca crescer.
         </p>
-        <div className="mt-8 flex items-center justify-center gap-3">
-          <Button variant="brand" size="lg" asChild>
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <Button variant="brand" size="default" className="sm:size-lg w-full sm:w-auto" asChild>
             <a href="mailto:contato@mediarise.agency" aria-label="Enviar e-mail para Mediarise">
               Quero Meu Diagnóstico Gratuito
             </a>
           </Button>
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="outline" size="default" className="sm:size-lg w-full sm:w-auto" asChild>
             <a href="#servicos">Ver serviços</a>
           </Button>
         </div>
