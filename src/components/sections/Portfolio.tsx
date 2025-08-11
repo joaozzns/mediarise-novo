@@ -4,11 +4,11 @@ const cases = [
   {
     title: "Clínica de Estética",
     result: "+180% em agendamentos",
-    desc: "SEO local + tráfego pago gerando demanda previsível.",
+    desc: "SEO local, redes sociais e tráfego pago integrados, garantindo demanda previsível e constante.",
   },
   {
     title: "Centro Odontológico",
-    result: "CAC -35%",
+    result: "-35% no custo de aquisição de clientes (CAC)",
     desc: "Otimização de campanhas e novas landing pages.",
   },
   {
@@ -24,7 +24,7 @@ const Portfolio = () => {
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Portfólio e Casos</h2>
         <p className="mt-3 text-muted-foreground max-w-2xl">
-          Amostras de projetos que elevam autoridade e geram resultados reais.
+          Conheça alguns projetos que aumentaram vendas, melhoraram presença digital e elevaram marcas ao próximo nível.
         </p>
         <div className="mt-10 grid md:grid-cols-3 gap-6">
           {cases.map((c) => (
