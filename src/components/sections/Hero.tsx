@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-mediarise.jpg";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -27,6 +29,31 @@ const Hero = () => {
             <a href="#contato">Fale com a gente</a>
           </Button>
         </div>
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="hero" size="icon" aria-label="Abrir menu">
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-3/4 sm:w-80">
+              <nav className="mt-8 grid gap-4 text-lg">
+                <SheetClose asChild>
+                  <a href="#servicos" className="story-link">Serviços</a>
+                </SheetClose>
+                <SheetClose asChild>
+                  <a href="#portfolio" className="story-link">Portfólio</a>
+                </SheetClose>
+                <SheetClose asChild>
+                  <a href="#depoimentos" className="story-link">Depoimentos</a>
+                </SheetClose>
+                <SheetClose asChild>
+                  <a href="#contato" className="story-link">Contato</a>
+                </SheetClose>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </nav>
 
       <div className="relative">
@@ -40,15 +67,15 @@ const Hero = () => {
         <div className="container relative z-10 py-24 md:py-36">
           <div className="max-w-3xl animate-enter">
             <h1 className="font-brand text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-              Eleve sua marca com a Mediarise
+              Transformamos marcas em referências no mercado.
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground">
-              Agência de Marketing para negócios premium. Social Media, Tráfego Pago,
-              Branding, Landing Pages/Sites e Marketing Digital focados em resultados.
+              Estratégias inteligentes de Marketing para negócios premium que querem
+              crescer mais rápido e com consistência.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Button variant="brand" size="lg" asChild>
-                <a href="#contato">Começar agora</a>
+                <a href="https://wa.me/5531986173170?text=Agende%20uma%20Consultoria%20Gratuita">Agende uma Consultoria Gratuita</a>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <a href="#portfolio">Ver portfólio</a>
