@@ -11,7 +11,7 @@ const Hero = () => {
           <img
             src="/lovable-uploads/683f8cff-d5e9-405e-8cfb-af4a3d755275.png"
             alt="Logo Mediarise Design & Marketing"
-            className="h-8 w-auto object-contain"
+            className="h-10 w-auto object-contain"
             width={152}
             height={36}
             loading="eager"
