@@ -25,13 +25,13 @@ const Hero = () => {
           <a href="#contato" className="story-link">Contato</a>
         </div>
         <div className="hidden md:flex items-center gap-3">
+          <Button variant="hero" size="sm" asChild>
+            <a href="#contato">Fale com a gente</a>
+          </Button>
           <Button variant="hero" size="icon" asChild>
             <a href="https://www.instagram.com/agenciamediarise/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Mediarise">
               <Instagram />
             </a>
-          </Button>
-          <Button variant="hero" size="sm" asChild>
-            <a href="#contato">Fale com a gente</a>
           </Button>
         </div>
         <div className="md:hidden">
