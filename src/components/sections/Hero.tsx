@@ -9,7 +9,7 @@ const Hero = () => {
       <nav className="container py-6 flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2" aria-label="Mediarise - Início">
           <img
-            src="/lovable-uploads/87e88eee-c826-4d85-8459-a293e617e55a.png"
+            src="/lovable-uploads/683f8cff-d5e9-405e-8cfb-af4a3d755275.png"
             alt="Logo Mediarise Design & Marketing"
             className="h-8 w-auto object-contain"
             width={152}
