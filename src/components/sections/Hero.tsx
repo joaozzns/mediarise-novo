@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-mediarise.jpg";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Instagram } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -24,7 +24,12 @@ const Hero = () => {
           <a href="#depoimentos" className="story-link">Depoimentos</a>
           <a href="#contato" className="story-link">Contato</a>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-3">
+          <Button variant="hero" size="icon" asChild>
+            <a href="https://www.instagram.com/agenciamediarise/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Mediarise">
+              <Instagram />
+            </a>
+          </Button>
           <Button variant="hero" size="sm" asChild>
             <a href="#contato">Fale com a gente</a>
           </Button>
