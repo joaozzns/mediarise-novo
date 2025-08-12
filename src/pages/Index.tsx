@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import SEO from "@/components/SEO";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
@@ -7,6 +8,9 @@ import Testimonials from "@/components/sections/Testimonials";
 import CTA from "@/components/sections/CTA";
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div id="inicio" className="min-h-screen bg-background text-foreground font-brand">
       <SEO
