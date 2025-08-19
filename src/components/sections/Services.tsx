@@ -1,19 +1,13 @@
-import { Megaphone, Target, Palette, Layout, LineChart } from "lucide-react";
+import { Target, Layout, LineChart } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: Megaphone,
-    title: "Social Media",
-    desc: "Gestão estratégica e criação de conteúdo de alto impacto para fortalecer sua presença, gerar desejo e atrair clientes certos.",
-  },
-  {
     icon: Target,
     title: "Tráfego Pago",
     desc: "Campanhas de performance com foco em leads e vendas.",
   },
-  { icon: Palette, title: "Branding", desc: "Posicionamento e identidade visual únicos para destacar sua marca e criar conexão" },
   {
     icon: Layout,
     title: "Landing Pages/Sites",
