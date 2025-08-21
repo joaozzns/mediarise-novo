@@ -1,13 +1,54 @@
+
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-mediarise.jpg";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Menu, Instagram } from "lucide-react";
 
 const Hero = () => {
+  const [activeSection, setActiveSection] = useState("inicio");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["inicio", "servicos", "portfolio", "depoimentos", "contato"];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const navLinkClass = (sectionId: string) =>
+    `story-link transition-colors cursor-pointer ${
+      activeSection === sectionId ? "text-primary font-semibold" : "text-foreground hover:text-primary"
+    }`;
+
   return (
     <header className="relative overflow-hidden">
       <nav className="container py-6 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-2" aria-label="Mediarise - Início">
+        <button 
+          onClick={() => scrollToSection("inicio")} 
+          className="flex items-center gap-2" 
+          aria-label="Mediarise - Início"
+        >
           <img
             src="/lovable-uploads/683f8cff-d5e9-405e-8cfb-af4a3d755275.png"
             alt="Logo Mediarise Design & Marketing"
@@ -17,12 +58,20 @@ const Hero = () => {
             loading="eager"
             decoding="async"
           />
-        </a>
+        </button>
         <div className="hidden md:flex items-center gap-6 text-sm">
-          <a href="#servicos" className="story-link">Serviços</a>
-          <a href="#portfolio" className="story-link">Portfólio</a>
-          <a href="#depoimentos" className="story-link">Depoimentos</a>
-          <a href="#contato" className="story-link">Contato</a>
+          <button onClick={() => scrollToSection("servicos")} className={navLinkClass("servicos")}>
+            Serviços
+          </button>
+          <button onClick={() => scrollToSection("portfolio")} className={navLinkClass("portfolio")}>
+            Portfólio
+          </button>
+          <button onClick={() => scrollToSection("depoimentos")} className={navLinkClass("depoimentos")}>
+            Depoimentos
+          </button>
+          <button onClick={() => scrollToSection("contato")} className={navLinkClass("contato")}>
+            Contato
+          </button>
         </div>
         <div className="hidden md:flex items-center gap-3">
           <Button variant="hero" size="sm" asChild>
@@ -44,16 +93,24 @@ const Hero = () => {
             <SheetContent side="right" className="w-3/4 sm:w-80">
               <nav className="mt-8 grid gap-4 text-lg">
                 <SheetClose asChild>
-                  <a href="#servicos" className="story-link">Serviços</a>
+                  <button onClick={() => scrollToSection("servicos")} className={navLinkClass("servicos")}>
+                    Serviços
+                  </button>
                 </SheetClose>
                 <SheetClose asChild>
-                  <a href="#portfolio" className="story-link">Portfólio</a>
+                  <button onClick={() => scrollToSection("portfolio")} className={navLinkClass("portfolio")}>
+                    Portfólio
+                  </button>
                 </SheetClose>
                 <SheetClose asChild>
-                  <a href="#depoimentos" className="story-link">Depoimentos</a>
+                  <button onClick={() => scrollToSection("depoimentos")} className={navLinkClass("depoimentos")}>
+                    Depoimentos
+                  </button>
                 </SheetClose>
                 <SheetClose asChild>
-                  <a href="#contato" className="story-link">Contato</a>
+                  <button onClick={() => scrollToSection("contato")} className={navLinkClass("contato")}>
+                    Contato
+                  </button>
                 </SheetClose>
               </nav>
             </SheetContent>

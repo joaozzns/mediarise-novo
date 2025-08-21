@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import SEO from "@/components/SEO";
 import Hero from "@/components/sections/Hero";
@@ -6,11 +7,13 @@ import Services from "@/components/sections/Services";
 import Portfolio from "@/components/sections/Portfolio";
 import Testimonials from "@/components/sections/Testimonials";
 import CTA from "@/components/sections/CTA";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   return (
     <div id="inicio" className="min-h-screen bg-background text-foreground font-brand">
       <SEO
@@ -28,6 +31,7 @@ const Index = () => {
       <footer className="border-t border-border/60 py-8 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} Mediarise. Todos os direitos reservados.
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };
