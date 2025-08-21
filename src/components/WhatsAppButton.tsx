@@ -12,7 +12,7 @@ const WhatsAppButton = () => {
       <Button
         asChild
         size="icon"
-        className="h-12 w-12 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        className="h-14 w-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
       >
         <a
           href={whatsappUrl}
@@ -20,7 +20,7 @@ const WhatsAppButton = () => {
           rel="noopener noreferrer"
           aria-label="Falar no WhatsApp"
         >
-          <MessageCircle className="h-6 w-6" />
+          <MessageCircle className="h-7 w-7" />
         </a>
       </Button>
     </div>
